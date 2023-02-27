@@ -1,5 +1,6 @@
 ﻿using EcommerceWeb.Models;
 using Entities;
+using Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using System.Diagnostics;
@@ -14,17 +15,17 @@ namespace EcommerceWeb.Controllers
         private readonly ProductServices _product;
         private readonly BannerService _bannerSer;
         private readonly BlogServices _blog;
-		public HomeController(ILogger<HomeController> logger, HomeSliderServices slider, CollectionServices collection, ProductServices product, BannerService bannerSer, BlogServices blog)
-		{
-			_logger = logger;
-			_slider = slider;
-			_collection = collection;
-			_product = product;
-			_bannerSer = bannerSer;
-			_blog = blog;
-		}
+        public HomeController(ILogger<HomeController> logger, HomeSliderServices slider, CollectionServices collection, ProductServices product, BannerService bannerSer, BlogServices blog )
+        {
+            _logger = logger;
+            _slider = slider;
+            _collection = collection;
+            _product = product;
+            _bannerSer = bannerSer;
+            _blog = blog;
+        }
 
-		public IActionResult Index()
+        public IActionResult Index()
         {
             HomeVM vm = new()
             {

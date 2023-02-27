@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Helpers\Helpers.csproj", "{F009765A-77F6-421B-BAF8-EB120CA4D232}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceWeb", "EcommerceWeb\EcommerceWeb.csproj", "{8126CEBB-9C00-4763-A618-DB747674CFF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceWeb", "EcommerceWeb\EcommerceWeb.csproj", "{8126CEBB-9C00-4763-A618-DB747674CFF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{6D25B323-400F-4794-9B78-92C24BBE29A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8126CEBB-9C00-4763-A618-DB747674CFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8126CEBB-9C00-4763-A618-DB747674CFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8126CEBB-9C00-4763-A618-DB747674CFF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D25B323-400F-4794-9B78-92C24BBE29A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D25B323-400F-4794-9B78-92C24BBE29A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D25B323-400F-4794-9B78-92C24BBE29A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D25B323-400F-4794-9B78-92C24BBE29A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

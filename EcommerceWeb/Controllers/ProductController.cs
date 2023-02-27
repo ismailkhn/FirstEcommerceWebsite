@@ -1,5 +1,6 @@
 ﻿using EcommerceWeb.Models;
 using Entities;
+using Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 
@@ -21,10 +22,12 @@ namespace EcommerceWeb.Controllers
 			ProductFilterVM vm = new()
 			{
 				ProductList = _productService.GetAll(search,categoryId),
-				CategoryList=_categoryService.GetAll(),
+				CategoryList=_categoryService.GetCategories(),
 				SearchText=search
-				
 			};
+
+			var a = CategoryHierarchyHelper.GetChildrenCategory(vm.CategoryList);
+
 			return View(vm);
 		}
 

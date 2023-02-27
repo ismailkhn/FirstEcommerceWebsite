@@ -30,7 +30,7 @@ namespace Entities
         public int CategoryId { get; set; }
         public bool IsDeleted { get; set; }
         public string? Manifacturer { get; set; }
-        public virtual List<ProductToPicture>ProductToPictures { get; set; }
+        public virtual List<ProductToPicture> ProductToPictures { get; set; }
         public virtual Category? Category { get; set; }
 
         public DateTime CreateAt { get; set; }

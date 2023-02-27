@@ -21,7 +21,13 @@ namespace Services
         {
             return _context.Categories.Count();
         }
-        public List<Category> GetAll() 
+
+
+        public List<Category> GetParentCategories() 
+        {
+            return _context.Categories.Where(c => !c.IsDeleted && c.ParentCategoryId==null).ToList();
+        }
+        public List<Category> GetCategories()
         {
             return _context.Categories.Where(c => !c.IsDeleted).ToList();
         }

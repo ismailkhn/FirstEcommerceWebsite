@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+@using Helpers.StaticModels
+@model List<CategoryWithChildren>
+
+
+<div id="menu">
+    <ul>
+        @foreach (var item in Model)
+        {
+
+            <li>
+                <span><a asp-controller="Product" asp-action="Index" asp-route-categoryId="@item.Parent.Id">@item.Parent.Name</a></span>
+                <ul>
+                    @foreach (var ch in item.Children)
+                    {
+                        <li>
+                            
+                            <a asp-controller="Product" asp-action="Index" asp-route-categoryId="@ch.Id">@ch.Name</a>
+
+                        </li>
+                    }
+                </ul>
+            </li>
+
+        }
+    </ul>
+</div>

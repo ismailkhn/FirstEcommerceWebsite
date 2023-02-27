@@ -32,10 +32,13 @@ namespace Services
             return _context.Products.Where(c =>!c.IsDeleted && c.Discount>0).ToList();
         }
 
-        public List<Product> GetAll(string? search,int?catId)
+        public List<Product> GetAll(string? search="",int? catId=null)
         {
             var prod=_context.Products
                 .Include(c => c.CoverPhoto)
+                .Include(c=>c.Category)
+                .Include(c=>c.ProductToPictures)
+                .ThenInclude(c=>c.Picture)
                 .Where(c => !c.IsDeleted).AsQueryable();
             if (catId.HasValue)
             {

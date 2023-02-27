@@ -98,6 +98,7 @@
 
         @foreach (var item in Model.TopSellingProducts)
         {
+
             decimal disc = (item.Discount / item.Price) * 100;
             <div class="col-6 col-md-4 col-xl-3">
                 <div class="grid_item">
@@ -140,9 +141,10 @@
             </div>
 
             <!-- /col -->
-        }
 
+        }
     </div>
+
     <!-- /row -->
 </div>
 <!-- /container -->
@@ -262,19 +264,21 @@
     </div><!-- /container -->
 </div>
 <!-- /bg_gray -->
+
+<div class="container margin_60_35">
+
 @if (Model.Blogs.Count > 0)
 {
 
-    <div class="container margin_60_35">
         <div class="main_title">
             <h2>Latest News</h2>
             <span>Blog</span>
             <p>BLOGLAR</p>
         </div>
-    </div>
+        <div class="row">
+
     @foreach (var item in Model.Blogs)
     {
-        <div class="row">
             <div class="col-lg-6">
                 <a class="box_news" asp-controller="Blog" asp-action="Details" asp-route-id="@item.Id">
                     <figure>
@@ -294,9 +298,11 @@
                 </a>
             </div>
             <!-- /box_news -->
-        </div>
         <!-- /row -->
         <!-- /container -->
     }
+    </div>
+
 
 }
+</div>
